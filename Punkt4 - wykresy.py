@@ -31,5 +31,5 @@ cdf = np.cumsum(probabilities)
 plt.plot(values, cdf, label='dystrybuanta', color='r')
 plt.legend()
 plt.show()
-plt.savefig("wykres.png")
+plt.savefig("wykres.jpg")
 
