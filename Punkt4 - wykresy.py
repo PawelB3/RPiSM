@@ -23,13 +23,11 @@ count_possibilities(k)
 distribution = norm(mean(total), std(total))
 values = np.unique(total)
 probabilities = [distribution.pdf(value) for value in values]
-plt.plot(values, probabilities, label='gęstość')
-#plt.axis([2, 19, 0, 0.15])
-plt.grid(True)
-#plt.xticks(total)
 cdf = np.cumsum(probabilities)
+
+
+plt.plot(values, probabilities, label='gęstość')
+plt.grid(True)
 plt.plot(values, cdf, label='dystrybuanta', color='r')
 plt.legend()
-plt.show()
-plt.savefig("wykres.jpg")
-
+plt.savefig("wykres")
